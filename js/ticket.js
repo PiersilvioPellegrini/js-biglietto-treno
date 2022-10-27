@@ -7,10 +7,10 @@ const prezzoBiglietto = numeroKm * 0.21;
 // Calcolo sconto
 let sconto = 0;
 if (Age < 18) {
-    sconto = prezzoBiglietto * 0.2;
+    sconto = prezzoBiglietto * 0.8;
 }
 else if (Age > 65) {
-    sconto = prezzoBiglietto * 0.4;
+    sconto = prezzoBiglietto * 0.6;
 }
 
 // Calcolo prezzo finale
