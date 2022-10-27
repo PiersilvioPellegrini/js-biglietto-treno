@@ -5,28 +5,37 @@ const Age = prompt("Quanti anni hai?");
 const prezzoBiglietto = numeroKm * 0.21;
 
 // Calcolo sconto
-let sconto = 0;
+let prezzoScontato = 0;
 if (Age < 18) {
-    sconto = prezzoBiglietto * 0.8;
+    prezzoScontato = prezzoBiglietto * 0.8;
     
 }
 else if (Age > 65) {
-    sconto = prezzoBiglietto * 0.6;
+    prezzoScontato = prezzoBiglietto * 0.6;
     
 }
-console.log(sconto);
+console.log(prezzoScontato);
 
 // Calcolo prezzo finale
-const prezzoFinale = prezzoBiglietto - sconto;
+const prezzoFinale = prezzoBiglietto - prezzoScontato;
 console.log(prezzoFinale);
 
 // output HTML
 let price = document.querySelector("#ticketPrice");
-price.innerHTML = prezzoFinale.toFixed(2)+ "€";
+price.innerHTML = prezzoBiglietto.toFixed(2)+ "€";
 
 
+if(prezzoScontato > 0) {
 let discount = document.getElementById("discountPrice");
-discount.innerHTML = "Hai diritto ad uno sconto di: " + sconto.toFixed(2) + "€";
+discount.innerHTML = "Prezzo Scontato è: " + prezzoScontato.toFixed(2) + "€";
+}
+else{
+    let discount = document.getElementById("discountPrice");
+    discount.innerHTML = "Non hai diritto a sconti";
+}
+
+
+
 
 
 
