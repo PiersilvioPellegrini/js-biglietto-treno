@@ -21,11 +21,11 @@ const prezzoFinale = prezzoBiglietto - sconto;
 console.log(prezzoFinale);
 
 // output HTML
-const price = document.getElementById("ticketPrice");
+let price = document.querySelector("#ticketPrice");
 price.innerHTML = prezzoFinale.toFixed(2)+ "€";
 
 
-const discount = document.getElementById("discountPrice");
+let discount = document.getElementById("discountPrice");
 discount.innerHTML = "Hai diritto ad uno sconto di: " + sconto.toFixed(2) + "€";
 
 
